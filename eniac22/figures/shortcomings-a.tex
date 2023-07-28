@@ -1,0 +1,14 @@
+\input{common.tex}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[every axis plot post/.append style={
+    mark=none,domain=-4:8,samples=50,smooth},
+    axis x line*=bottom,
+    axis y line*=left,
+    enlargelimits=upper]
+    \addplot[dashed, thick] {gauss(1, 9)};
+    \addplot[dotted, thick] {gauss(3, 9)};
+    \addplot[ultra thick] {0.5 * gauss(1, 9) + 0.5 * gauss(3, 9)};
+  \end{axis}
+\end{tikzpicture}
+\end{document}

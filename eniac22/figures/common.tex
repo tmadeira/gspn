@@ -1,0 +1,11 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{pgfplots}
+
+% http://pgfplots.net/tikz/examples/bell-curve/
+\pgfplotsset{compat=1.8}
+\pgfmathdeclarefunction{gauss}{2}{\pgfmathparse{1/(sqrt(#2*2*pi))*exp(-((x-#1)^2)/(2*#2))}}
+\pgfmathdeclarefunction{multigauss}{4}{\pgfmathparse{1/(sqrt(#2*2*pi))*exp(-((x-#1)^2)/(2*#2)) * 1/(sqrt(#4*2*pi))*exp(-((y-#3)^2)/(2*#4))}}
+
+\pgfplotsset{colormap={whiteblack}{color(0cm)=(white); color(1cm)=(gray)}}
+
+\usetikzlibrary{positioning,shapes,arrows}

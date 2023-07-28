@@ -1,0 +1,451 @@
+
+
+@inproceedings{julissa-bracis,
+ author = {Julissa Villanueva Llerena and Denis Deratani Mauá},
+ booktitle = {Proceedings of the 6th Brazilian Conference on Intelligent Systems},
+ pages = {25--30},
+ series = {BRACIS},
+ title = {On Using Sum-Product Networks For Multi-Label Classification},
+ year = {2017}
+}
+
+
+
+
+@misc{Molina2019SPFlow,
+  Author = {Alejandro Molina and Antonio Vergari and Karl Stelzner and Robert Peharz and Pranav Subramani and Nicola Di Mauro and Pascal Poupart and Kristian Kersting},
+  Title = {SPFlow: An Easy and Extensible Library for Deep Probabilistic Learning using Sum-Product Networks},
+  Year = {2019},
+  Eprint = {arXiv:1901.03704},
+}
+@inproceedings{Maua2020,
+author = {Mau{\'{a}}, Denis Deratani and Ribeiro, Heitor Reis and Katague, Gustavo Perez and Antonucci, Alessandro},
+booktitle = {Proceedings of the Tenth International Conference on Probabilistic Graphical Models},
+editor = {Jaeger, Manfred and Nielsen, Thomas Dyhre},
+pages = {293--304},
+publisher = {PMLR},
+series = {Proceedings of Machine Learning Research},
+title = {{Two Reformulation Approaches to Maximum-A-Posteriori Inference in Sum-Product Networks}},
+volume = {138},
+year = {2020}
+}
+@article{Hsu2017,
+abstract = {Sum-product networks have recently emerged as an attractive representation due to their dual view as a special type of deep neural network with clear semantics and a special type of probabilistic graphical model for which inference is always tractable. Those properties follow from some conditions (i.e., completeness and decomposability) that must be respected by the structure of the network. As a result, it is not easy to specify a valid sum-product network by hand and therefore structure learning techniques are typically used in practice. This paper describes the first online structure learning technique for continuous SPNs with Gaussian leaves. We also introduce an accompanying new parameter learning technique.},
+author = {Hsu, Wilson and Kalra, Agastya and Poupart, Pascal},
+month = {jan},
+title = {{Online Structure Learning for Sum-Product Networks with Gaussian Leaves}},
+year = {2017}
+}
+@article{Desana2016,
+abstract = {Sum-Product Networks with complex probability distribution at the leaves have been shown to be powerful tractable-inference probabilistic models. However, while learning the internal parameters has been amply studied, learning complex leaf distribution is an open problem with only few results available in special cases. In this paper we derive an efficient method to learn a very large class of leaf distributions with Expectation-Maximization. The EM updates have the form of simple weighted maximum likelihood problems, allowing to use any distribution that can be learned with maximum likelihood, even approximately. The algorithm has cost linear in the model size and converges even if only partial optimizations are performed. We demonstrate this approach with experiments on twenty real-life datasets for density estimation, using tree graphical models as leaves. Our model outperforms state-of-the-art methods for parameter learning despite using SPNs with much fewer parameters.},
+author = {Desana, Mattia and Schn{\"{o}}rr, Christoph},
+month = {apr},
+title = {{Learning Arbitrary Sum-Product Network Leaves with Expectation-Maximization}},
+year = {2016}
+}
+@inproceedings{Poon2011,
+abstract = {The key limiting factor in graphical model inference and learning is the complexity of the partition function. We thus ask the question: what are general conditions under which the partition function is tractable? The answer leads to a new kind of deep architecture, which we call sum-product networks (SPNs). SPNs are directed acyclic graphs with variables as leaves, sums and products as internal nodes, and weighted edges. We show that if an SPN is complete and consistent it represents the partition function and all marginals of some graphical model, and give semantics to its nodes. Essentially all tractable graphical models can be cast as SPNs, but SPNs are also strictly more general. We then propose learning algorithms for SPNs, based on backpropagation and EM. Experiments show that inference and learning with SPNs can be both faster and more accurate than with standard deep networks. For example, SPNs perform image completion better than state-of-the-art deep networks for this task. SPNs also have intriguing potential connections to the architecture of the cortex.},
+author = {Poon, Hoifung and Domingos, Pedro},
+booktitle = {2011 IEEE International Conference on Computer Vision Workshops (ICCV Workshops)},
+month = {nov},
+pages = {689--690},
+publisher = {IEEE},
+title = {{Sum-product networks: A new deep architecture}},
+year = {2011}
+}
+@inproceedings{Zhao2015,
+abstract = {In this paper, we establish some theoretical connections between Sum-Product Networks (SPNs) and Bayesian Networks (BNs). We prove that every SPN can be converted into a BN in linear time and space in terms of the network size. The key insight is to use Algebraic Decision Diagrams (ADDs) to compactly represent the local conditional probability distributions at each node in the resulting BN by exploiting context-specific independence (CSI). The generated BN has a simple directed bipartite graphical structure. We show that by applying the Variable Elimination algorithm (VE) to the generated BN with ADD representations, we can recover the original SPN where the SPN can be viewed as a history record or caching of the VE inference process. To help state the proof clearly, we introduce the notion of {\{}$\backslash$em normal{\}} SPN and present a theoretical analysis of the consistency and decomposability properties. We conclude the paper with some discussion of the implications of the proof and establish a connection between the depth of an SPN and a lower bound of the tree-width of its corresponding BN.},
+address = {Lille, France},
+author = {Zhao, Han and Melibari, Mazen and Poupart, Pascal},
+booktitle = {ICML'15 Proceedings of the 32nd International Conference on International Conference on Machine Learning - Volume 37},
+month = {jan},
+pages = {116--124},
+publisher = {JMLR.org},
+title = {{On the Relationship between Sum-Product Networks and Bayesian Networks}},
+year = {2015}
+}
+@article{Woolf1957,
+abstract = {The theoretical basis of the log likelihood ratio test (the G‐test) is described, and instructions and tables are given for its use as a test of heterogeneity in contingency tables. There is a marked saving in computation time over the customary Karl Pearson test. It is a pleasure to thank Miss Mary Wheeler and Miss Madge Wight for the major part of the computations. Copyright {\textcopyright} 1957, Wiley Blackwell. All rights reserved},
+author = {Woolf, Barnet},
+journal = {Annals of Human Genetics},
+pages = {397--409},
+title = {{The log likelihoold ratio test (the G-test)}},
+volume = {21},
+year = {1957}
+}
+@inproceedings{Molina2018,
+abstract = {While all kinds of mixed data'from personal data, over panel and scientific data, to public and commercial data'are collected and stored, building probabilistic graphical models for these hybrid domains becomes more difficult. Users spend significant amounts of time in identifying the parametric form of the random variables (Gaussian, Poisson, Logit, etc.) involved and learning the mixed models. To make this difficult task easier, we propose the first trainable probabilistic deep architecture for hybrid domains that features tractable queries. It is based on Sum-Product Networks (SPNs) with piecewise polynomial leaf distributions together with novel nonparametric decomposition and conditioning steps using the Hirschfeld-Gebelein-R{\'{e}}nyi Maximum Correlation Coefficient. This relieves the user from deciding a-priori the parametric form of the random variables but is still expressive enough to effectively approximate any distribution and permits efficient learning and inference. Our experiments show that the architecture, called Mixed SPNs, can indeed capture complex distributions across a wide range of hybrid domains.},
+author = {Molina, Alejandro and Natarajan, Sriraam and Vergari, Antonio and Esposito, Floriana and Mauro, Nicola Di and Kersting, Kristian},
+booktitle = {32nd AAAI Conference on Artificial Intelligence, AAAI 2018},
+title = {{Mixed sum-product networks: A deep architecture for hybrid domains}},
+year = {2018}
+}
+@article{Carreira-Perpinan2000,
+abstract = {Gradient-quadratic and fixed-point iteration algorithms and appropriate values for their control parameters are derived for finding all modes of a Gaussian mixture, a problem with applications in clustering and regression. The significance of the modes found is quantified locally by Hessian-based error bars and globally by the entropy as sparseness measure. {\textcopyright} 2000 IEEE.},
+author = {Carreira-Perpi{\~{n}}{\'{a}}n, Miguel {\'{A}}},
+journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+keywords = {Bump finding,Error bars,Gaussian mixtures,Maximization algorithms,Mode finding,Sparseness},
+number = {11},
+pages = {1318--1323},
+title = {{Mode-finding for mixtures of gaussian distributions}},
+volume = {22},
+year = {2000}
+}
+@inproceedings{Gens2013,
+abstract = {Sum-product networks (SPNs) are a new class of deep probabilistic models. SPNs can have unbounded treewidth but inference in them is always tractable. An SPN is either a univariate distribution, a product of SPNs over disjoint variables, or a weighted sum of SPNs over the same variables. We propose the first algorithm for learning the structure of SPNs that takes full advantage of their ex-pressiveness. At each step, the algorithm at-tempts to divide the current variables into approximately independent subsets. If suc-cessful, it returns the product of recursive calls on the subsets; otherwise it returns the sum of recursive calls on subsets of simi-lar instances from the current training set. A comprehensive empirical study shows that the learned SPNs are typically comparable to graphical models in likelihood but superior in inference speed and accuracy.},
+address = {Atlanta, GA, USA},
+author = {Gens, Robert and Domingos, Pedro},
+booktitle = {Proceedings of the 30th International Conference on Machine Learning},
+editor = {Dasgupta, Sanjoy and McAllester, David},
+pages = {873--880},
+publisher = {PMLR},
+title = {{Learning the structure of sum-product networks}},
+year = {2013}
+}
+@inproceedings{Carreira-Perpinan2003,
+abstract = {We consider a problem intimately related to the creation of maxima under Gaussian blurring: the number of modes of a Gaussian mixture in D dimensions. To our knowledge, a general answer to this question is not known. We conjecture that if the components of the mixture have the same covariance matrix (or the same covariance matrix up to a scaling factor), then the number of modes cannot exceed the number of components. We demonstrate that the number of modes can exceed the number of components when the components are allowed to have arbitrary and different covariance matrices. We will review related results from scale-space theory, statistics and machine learning, including a proof of the conjecture in 1D. We present a convergent, EM-like algorithm for mode finding and compare results of searching for all modes starting from the centers of the mixture components with a brute-force search. We also discuss applications to data reconstruction and clustering. {\textcopyright} Springer-Verlag Berlin Heidelberg 2003.},
+address = {Berlin, Heidelberg},
+author = {Carreira-Perpi{\~{n}}{\'{a}}n, Miguel {\'{A}} and Williams, Christopher K.I.},
+booktitle = {Scale Space Methods in Computer Vision},
+editor = {Griffin, Lewis D. and Lillholm, Martin},
+pages = {625--640},
+publisher = {Springer Berlin Heidelberg},
+title = {{On the number of modes of a Gaussian mixture}},
+volume = {2695},
+year = {2003}
+}
+@article{Clausen1999,
+abstract = {A large number of real-world planning problems called combinatorial optimization problems share the following properties: They are optimiza- tion problems, are easy to state, and have a finite but usually very large number of feasible solutions. While some of these as e.g. the Shortest Path problem and the Minimum Spanning Tree problem have polynomial algo- ritms, the majority of the problems in addition share the property that no polynomial method for their solution is known. Examples here are vehicle routing, crew scheduling, and production planning. All of these problems are NP-hard. Branch and Bound (B{\&}B) is by far the most widely used tool for solv- ing large scale NP-hard combinatorial optimization problems. B{\&}B is, however, an algorithm paradigm, which has to be filled out for each spe- cific problem type, and numerous choices for each of the components ex- ist. Even then, principles for the design of efficient B{\&}B algorithms have emerged over the years. In this paper I review the main principles of B{\&}B and illustrate the method and the different design issues through three examples: the Sym- metric Travelling Salesman Problem, the Graph Partitioning problem, and the Quadratic Assignment problem.},
+author = {Clausen, Jens},
+journal = {Department of Computer Science, University of Copenhagen},
+pages = {1--30},
+title = {{Branch and bound algorithms-principles and examples}},
+year = {1999}
+}
+@article{Carreira-Perpinan2003a,
+author = {Carreira-Perpi{\~{n}}{\'{a}}n, Miguel {\'{A}} and Williams, Christopher K.I.},
+journal = {Institute for Adaptive and Neural Computation},
+number = {2},
+title = {{An isotropic Gaussian mixture can have more modes than components}},
+volume = {4},
+year = {2003}
+}
+@book{Bondy2008,
+author = {Bondy, John Adrian and Murty, Uppaluri Siva Ramachandra},
+edition = {1},
+pages = {663},
+publisher = {Springer-Verlag London},
+title = {{Graph Theory}},
+year = {2008}
+}
+@article{Szekely2007,
+abstract = {Distance correlation is a new measure of dependence between random vectors. Distance covariance and distance correlation are analogous to product-moment covariance and correlation, but unlike the classical definition of correlation, distance correlation is zero only if the random vectors are independent. The empirical distance dependence measures are based on certain Euclidean distances between sample elements rather than sample moments, yet have a compact representation analogous to the classical covariance and correlation. Asymptotic properties and applications in testing independence are discussed. Implementation of the test and Monte Carlo results are also presented. {\textcopyright} Institute of Mathematical Statistics, 2007.},
+author = {Sz{\'{e}}kely, G{\'{a}}bor J. and Rizzo, Maria L. and Bakirov, Nail K.},
+journal = {Annals of Statistics},
+keywords = {Distance correlation,Distance covariance,Multivariate independence},
+number = {6},
+pages = {2769--2794},
+title = {{Measuring and testing dependence by correlation of distances}},
+volume = {35},
+year = {2007}
+}
+@article{Comaniciu2002,
+abstract = {A general nonparametric technique is proposed for the analysis of a complex multimodal feature space and to delineate arbitrarily shaped clusters in it. The basic computational module of the technique is an old pattern recognition procedure, the mean shift. We prove for discrete data the convergence of a recursive mean shift procedure to the nearest stationary point of the underlying density function and, thus, its utility in detecting the modes of the density. The relation of the mean shift procedure to the Nadaraya-Watson estimator from kernel regression and the robust M-estimators of location is also established. Algorithms for two low-level vision tasks, discontinuity preserving smoothing and image segmentation, are described as applications. In these algorithms, the only user set parameter is the resolution of the analysis and either gray level or color images are accepted as input. Extensive experimental results illustrate their excellent performance.},
+author = {Comaniciu, Dorin and Meer, Peter},
+journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+keywords = {Clustering,Feature space,Image segmentation,Image smoothing,Low-level vision,Mean shift},
+number = {5},
+pages = {603--619},
+title = {{Mean shift: A robust approach toward feature space analysis}},
+volume = {24},
+year = {2002}
+}
+@inproceedings{Park2002,
+abstract = {MAP is the problem of finding a most probable instantiation of a set of nvariables in a Bayesian network, given some evidence. MAP appears to be a significantly harder problem than the related problems of computing the probability of evidence Pr, or MPE a special case of MAP. Because of the complexity of MAP, and the lack of viable algorithms to approximate it,MAP computations are generally avoided by practitioners. This paper investigates the complexity of MAP. We show that MAP is complete for NP. We also provide negative complexity results for elimination based algorithms. It turns out that MAP remains hard even when MPE, and Pr are easy. We show that MAP is NPcomplete when the networks are restricted to polytrees, and even then can not be effectively approximated. Because there is no approximation algorithm with guaranteed results, we investigate best effort approximations. We introduce a generic MAP approximation framework. As one instantiation of it, we implement local search coupled with belief propagation BP to approximate MAP. We show how to extract approximate evidence retraction information from belief propagation which allows us to perform efficient local search. This allows MAP approximation even on networks that are too complex to even exactly solve the easier problems of computing Pr or MPE. Experimental results indicate that using BP and local search provides accurate MAP estimates in many cases.},
+address = {San Francisco, CA, USA},
+author = {Park, James D.},
+booktitle = {Proceedings of the Eighteenth conference on Uncertainty in artificial intelligence},
+month = {dec},
+pages = {388--396},
+publisher = {Morgan Kaufmann Publishers Inc.},
+title = {{MAP Complexity Results and Approximation Methods}},
+year = {2002}
+}
+@inproceedings{Chan2006,
+abstract = {In Bayesian networks, a Most Probable Explanation (MPE) is a complete variable instantiation with the highest probability given the current evidence. In this paper, we discuss the problem of finding robustness conditions of the MPE under single parameter changes. Specifically, we ask the question: How much change in a single network parameter can we afford to apply while keeping the MPE unchanged? We will describe a procedure, which is the first of its kind, that computes this answer for all parameters in the Bayesian network in time O(nexp(w)), where n is the number of network variables and w is its treewidth.},
+address = {Cambridge, MA, USA},
+author = {Chan, Hei and Darwiche, Adnan},
+booktitle = {Proceedings of the 22nd Conference on Uncertainty in Artificial Intelligence, UAI 2006},
+pages = {63--71},
+title = {{On the robustness of most probable explanations}},
+year = {2006}
+}
+@article{Peharz2016,
+abstract = {One of the central themes in Sum-Product networks (SPNs) is the interpretation of sum nodes as marginalized latent variables (LVs). This interpretation yields an increased syntactic or semantic structure, allows the application of the EM algorithm and to efficiently perform MPE inference. In literature, the LV interpretation was justified by explicitly introducing the indicator variables corresponding to the LVs' states. However, as pointed out in this paper, this approach is in conflict with the completeness condition in SPNs and does not fully specify the probabilistic model. We propose a remedy for this problem by modifying the original approach for introducing the LVs, which we call SPN augmentation. We discuss conditional independencies in augmented SPNs, formally establish the probabilistic interpretation of the sum-weights and give an interpretation of augmented SPNs as Bayesian networks. Based on these results, we find a sound derivation of the EM algorithm for SPNs. Furthermore, the Viterbi-style algorithm for MPE proposed in literature was never proven to be correct. We show that this is indeed a correct algorithm, when applied to selective SPNs, and in particular when applied to augmented SPNs. Our theoretical results are confirmed in experiments on synthetic data and 103 real-world datasets.},
+author = {Peharz, Robert and Gens, Robert and Pernkopf, Franz and Domingos, Pedro},
+journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+keywords = {MPE inference,Sum-product networks,expectation-maximization,latent variables,mixture models},
+month = {jan},
+number = {10},
+pages = {2030--2044},
+title = {{On the Latent Variable Interpretation in Sum-Product Networks}},
+volume = {39},
+year = {2016}
+}
+@inproceedings{Conaty2017,
+abstract = {We discuss the computational complexity of approximating maximum a posteriori inference in sum-product networks. We first show NP-hardness in trees of height two by a reduction from maximum independent set; this implies non-approximability within a sublinear factor. We show that this is a tight bound, as we can find an approximation within a linear factor in networks of height two. We then show that, in trees of height three, it is NP-hard to approximate the problem within a factor {\$}2{\^{}}{\{}f(n){\}}{\$} for any sublinear function {\$}f{\$} of the size of the input {\$}n{\$}. Again, this bound is tight, as we prove that the usual max-product algorithm finds (in any network) approximations within factor {\$}2{\^{}}{\{}c \backslashcdot n{\}}{\$} for some constant {\$}c {\textless} 1{\$}. Last, we present a simple algorithm, and show that it provably produces solutions at least as good as, and potentially much better than, the max-product algorithm. We empirically analyze the proposed algorithm against max-product using synthetic and realistic networks.},
+author = {Conaty, Diarmaid and Mau{\'{a}}, Denis D. and de Campos, Cassio P.},
+booktitle = {Proceedings of the Thirty-Third Conference on Uncertainty in Artificial Intelligence},
+editor = {Elidan, Gal and Kersting, Kristian},
+month = {mar},
+pages = {322--331},
+publisher = {AUAI Press},
+title = {{Approximation Complexity of Maximum A Posteriori Inference in Sum-Product Networks}},
+year = {2017}
+}
+@book{Kadane2011,
+author = {Kadane, Joseph Born},
+pages = {504},
+publisher = {Chapman {\&} Hall},
+title = {{Principles of Uncertainty}},
+year = {2011}
+}
+@inproceedings{Mei2017,
+abstract = {Sum-product networks (SPNs) are a class of probabilistic graphical models that allow tractable marginal inference. However, the maximum a posteriori (MAP) inference in SPNs is NP-hard. We investigate MAP inference in SPNs from both theoretical and algorithmic perspectives. For the theoretical part, we reduce general MAP inference to its special case without evidence and hidden variables; we also show that it is NP-hard to approximate the MAP problem to {\$}2{\^{}}{\{}n{\^{}}\backslashepsilon{\}}{\$} for fixed {\$}0 \backslashleq \backslashepsilon {\textless} 1{\$}, where {\$}n{\$} is the input size. For the algorithmic part, we first present an exact MAP solver that runs reasonably fast and could handle SPNs with up to 1k variables and 150k arcs in our experiments. We then present a new approximate MAP solver with a good balance between speed and accuracy, and our comprehensive experiments on real-world datasets show that it has better overall performance than existing approximate solvers.},
+author = {Mei, Jun and Jiang, Yong and Tu, Kewei},
+booktitle = {AAAI Conference on Artificial Intelligence},
+title = {{Maximum A Posteriori Inference in Sum-Product Networks}},
+year = {2018}
+}
+@book{Koller2009,
+abstract = {Most tasks require a person or an automated system to reasonto reach conclusions based on available information. The framework of probabilistic graphical models, presented in this book, provides a general approach for this task. The approach is model-based, allowing interpretable models to be constructed and then manipulated by reasoning algorithms. These models can also be learned automatically from data, allowing the approach to be used in cases where manually constructing a model is difficult or even impossible. Because uncertainty is an inescapable aspect of most real-world applications, the book focuses on probabilistic models, which make the uncertainty explicit and provide models that are more faithful to reality.Probabilistic Graphical Models discusses a variety of models, spanning Bayesian networks, undirected Markov networks, discrete and continuous models, and extensions to deal with dynamical systems and relational data. For each class of models, the text describes the three fundamental cornerstones: representation, inference, and learning, presenting both basic concepts and advanced techniques. Finally, the book considers the use of the proposed framework for causal reasoning and decision making under uncertainty.The main text in each chapter provides the detailed technical development of the key ideas. Most chapters also include boxes with additional material: skill boxes, which describe techniques; case study boxes, which discuss empirical cases related to the approach described in the text, including applications in computer vision, robotics, natural language understanding, and computational biology; and concept boxes, which present significant concepts drawn from the material in the chapter. Instructors (and readers) can group chapters in various combinations, from core topics to more technically advanced material, to suit their particular needs.Adaptive Computation and Machine Learning series},
+author = {Koller, Daphne and Friedman, Nir},
+booktitle = {Foundations},
+title = {{Probabilistic Graphical Models: Principles and Techniques}},
+year = {2009}
+}
+@book{Russell2010,
+abstract = {The long-anticipated revision of this {\#}1 selling book offers the most comprehensive, state of the art introduction to the theory and practice of artificial intelligence for modern applications. Intelligent Agents. Solving Problems by Searching. Informed},
+author = {Russell, Stuart and Norvig, Peter},
+booktitle = {Pearson},
+edition = {3},
+title = {{Artificial Intelligence A Modern Approach}},
+year = {2010}
+}
+@inproceedings{Rashwan2016,
+abstract = {Probabilistic graphical models provide a gen-eral and flexible framework for reasoning about complex dependencies in noisy do-mains with many variables. Among the var-ious types of probabilistic graphical mod-els, sum-product networks (SPNs) have re-cently generated some interest because ex-act inference can always be done in linear time with respect to the size of the network. This is particularly attractive since it means that learning an SPN from data always yields a tractable model for inference. However, existing parameter learning algorithms for SPNs operate in batch mode and do not scale easily to large datasets. In this work, we explore online algorithms to ensure that pa-rameter learning can also be done tractably with respect to the amount of data. More specifically, we propose a new Bayesian mo-ment matching (BMM) algorithm that oper-ates naturally in an online fashion and that can be easily distributed. We demonstrate the effectiveness and scalability of BMM in comparison to online extensions of gradient descent, exponentiated gradient and expecta-tion maximization on 20 classic benchmarks and 4 large scale datasets.},
+author = {Rashwan, Abdullah and Zhao, Han and Poupart, Pascal},
+booktitle = {Proceedings of the 19th International Conference on Artificial Intelligence and Statistics, AISTATS 2016},
+pages = {1469--1477},
+title = {{Online and distributed Bayesian moment matching for parameter learning in sum-product networks}},
+year = {2016}
+}
+@inproceedings{Dennis2012,
+abstract = {The sum-product network (SPN) is a recently-proposed deep model consisting of a network of sum and product nodes, and has been shown to be competitive with state-of-the-art deep models on certain difficult tasks such as image completion. Designing an SPN network architecture that is suitable for the task at hand is an open question. We propose an algorithm for learning the SPN architecture from data. The idea is to cluster variables (as opposed to data instances) in order to identify variable subsets that strongly interact with one another. Nodes in the SPN network are then allocated towards explaining these interactions. Experimental evidence shows that learning the SPN architecture significantly improves its performance compared to using a previously-proposed static architecture.},
+author = {Dennis, Aaron and Ventura, Dan},
+booktitle = {Advances in Neural Information Processing Systems},
+pages = {2033--2041},
+publisher = {Curran Associates, Inc.},
+title = {{Learning the architecture of sum-product networks using clustering on variables}},
+year = {2012}
+}
+@article{Amendola2019,
+abstract = {Gaussian mixture models are widely used in Statistics. A fundamental aspect of these distributions is the study of the local maxima of the density, or modes. In particular, it is not known how many modes a mixture of {\$}k{\$} Gaussians in {\$}d{\$} dimensions can have. We give a brief account of this problem's history. Then, we give improved lower bounds and the first upper bound on the maximum number of modes, provided it is finite.},
+author = {Am{\'{e}}ndola, Carlos and Engstr{\"{o}}m, Alexander and Haase, Christian},
+journal = {Information and Inference: A Journal of the IMA},
+month = {feb},
+title = {{Maximum Number of Modes of Gaussian Mixtures}},
+year = {2019}
+}
+@article{Li2007,
+author = {Li, Jia and Ray, Surajit and Lindsay, Bruce G},
+journal = {Journal of Machine Learning Research},
+number = {59},
+pages = {1687--1723},
+title = {{A Nonparametric Statistical Approach to Clustering via Mode Identification}},
+volume = {8},
+year = {2007}
+}
+@inproceedings{Zhao2016,
+abstract = {We present a unified approach for learning the parameters of Sum-Product networks (SPNs). We prove that any complete and decomposable SPN is equivalent to a mixture of trees where each tree corresponds to a product of univariate distributions. Based on the mixture model perspective, we characterize the objective function when learning SPNs based on the maximum likelihood estimation (MLE) principle and show that the optimization problem can be formulated as a signomial program. We construct two parameter learning algorithms for SPNs by using sequential monomial approximations (SMA) and the concave-convex procedure (CCCP), respectively. The two proposed methods naturally admit multiplicative updates, hence effectively avoiding the projection operation. With the help of the unified framework, we also show that, in the case of SPNs, CCCP leads to the same algorithm as Expectation Maximization (EM) despite the fact that they are different in general.},
+author = {Zhao, Han and Poupart, Pascal and Gordon, Geoff},
+booktitle = {Advances in Neural Information Processing Systems},
+pages = {433--441},
+publisher = {Curran Associates, Inc.},
+title = {{A unified approach for learning the parameters of Sum-Product Networks}},
+year = {2016}
+}
+@article{Park2004,
+abstract = {MAP is the problem of finding a most probable instantiation of a set of variables given evidence. MAP has always been perceived to be significantly harder than the related problems of computing the probability of a variable instantiation (Pr), or the problem of computing the most probable explanation (MPE). This paper investigates the complexity of MAP in Bayesian networks. Specifically, we show that MAP is complete for NP PP and provide further negative complexity results for algorithms based on variable elimination. We also show that MAP remains hard even when MPE and Pr become easy. For example, we show that MAP is NP-complete when the networks are restricted to polytrees, and even then can not be effectively approximated. Given the difficulty of computing MAP exactly, and the difficulty of approximating MAP while providing useful guarantees on the resulting approximation, we investigate best effort approximations. We introduce a generic MAP approximation framework. We provide two instantiations of the framework; one for networks which are amenable to exact inference (Pr), and one for networks for which even exact inference is too hard. This allows MAP approximation on networks that are too complex to even exactly solve the easier problems, Pr and MPE. Experimental results indicate that using these approximation algorithms provides much better solutions than standard techniques, and provide accurate MAP estimates in many cases. {\textcopyright} 2004 AI Access Foundation and Morgan Kaufmann Publishers. All rights reserved.},
+author = {Park, James D. and Darwiche, Adnan},
+journal = {Journal of Artificial Intelligence Research},
+number = {1},
+pages = {101--133},
+title = {{Complexity results and approximation strategies for MAP explanations}},
+volume = {21},
+year = {2004}
+}
+@article{Fukunaga1975,
+author = {Fukunaga, K. and Hostetler, L.},
+journal = {IEEE Transactions on Information Theory},
+month = {jan},
+number = {1},
+pages = {32--40},
+title = {{The estimation of the gradient of a density function, with applications in pattern recognition}},
+volume = {21},
+year = {1975}
+}
+@inproceedings{Jaini2016,
+address = {Lugano, Switzerland},
+author = {Jaini, Priyank and Rashwan, Abdullah and Zhao, Han and Liu, Yue and Banijamali, Ershad and Chen, Zhitang and Poupart, Pascal},
+booktitle = {Proceedings of the Eighth International Conference on Probabilistic Graphical Models},
+editor = {Antonucci, Alessandro and Corani, Giorgio and Campos, Cassio Polpo},
+pages = {228--239},
+publisher = {PMLR},
+title = {{Online Algorithms for Sum-Product Networks with Continuous Variables}},
+year = {2016}
+}
+@article{Amer2016,
+abstract = {{\textcopyright} 1979-2012 IEEE. This paper addresses detection and localization of human activities in videos. We focus on activities that may have variable spatiotemporal arrangements of parts, and numbers of actors. Such activities are represented by a sum-product network (SPN). A product node in SPN represents a particular arrangement of parts, and a sum node represents alternative arrangements. The sums and products are hierarchically organized, and grounded onto space-time windows covering the video. The windows provide evidence about the activity classes based on the Counting Grid (CG) model of visual words. This evidence is propagated bottom-up and top-down to parse the SPN graph for the explanation of the video. The node connectivity and model parameters of SPN and CG are jointly learned under two settings, weakly supervised, and supervised. For evaluation, we use our new Volleyball dataset, along with the benchmark datasets VIRAT, UT-Interactions, KTH, and TRECVID MED 2011. Our video classification and activity localization are superior to those of the state of the art on these datasets.},
+author = {Amer, Mohamed R. and Todorovic, Sinisa},
+journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+keywords = {Activity Recognition,Hierarchical Models,Sum-Product Networks},
+month = {apr},
+number = {4},
+pages = {800--813},
+title = {{Sum Product Networks for Activity Recognition}},
+volume = {38},
+year = {2016}
+}
+@phdthesis{Peharz2015,
+author = {Peharz, Robert},
+school = {Graz University of Technology},
+title = {{Foundations of Sum-Product Networks for Probabilistic Modeling}},
+year = {2015}
+}
+@article{Darwiche2003,
+abstract = {We present a new approach to inference in Bayesian networks, which is based on representing the network using a polynomial and then retrieving answers to probabilistic queries by evaluating and differentiating the polynomial. The network polynomial itself is exponential in size, but we show how it can be computed efficiently using an arithmetic circuit that can be evaluated and differentiated in time and space linear in the circuit size. The proposed framework for inference subsumes one of the most influential methods for inference in Bayesian networks, known as the tree-clustering or jointree method, which provides a deeper understanding of this classical method and lifts its desirable characteristics to a much more general setting. We discuss some theoretical and practical implications of this subsumption.},
+author = {Darwiche, Adnan},
+journal = {Journal of the ACM},
+keywords = {Bayesian networks,Circuit complexity,Compiling probabilistic models,Probabilistic reasoning},
+month = {may},
+number = {3},
+pages = {280--305},
+title = {{A differential approach to inference in Bayesian networks}},
+volume = {50},
+year = {2003}
+}
+@inproceedings{Rooshenas2014,
+abstract = {Copyright {\textcopyright} (2014) by the International Machine Learning Society (IMLS) All rights reserved. Sum-product networks (SPNs) are a deep probabilistic representation that allows for efficient, exact inference. SPNs generalize many other tractable models, including thin junction trees, latent tree models, and many types of mixtures. Previous work on learning SPN structure has mainly focused on using top-down or bottom-up clustering to find mixtures, which capture variable interactions indirectly through implicit latent variables. In contrast, most work on learning graphical models, thin junction trees, and arithmetic circuits has focused on finding direct in-teractions among variables. In this paper, we present ID-SPN, a new algorithm for learning SPN structure that unifies the two approaches. In experiments on 20 benchmark datasets, we find that the combination of direct and indirect interactions leads to significantly better accuracy than several state-of-the-art algorithms for learning SPNs and other tractable models.},
+address = {Beijing, China},
+author = {Rooshenas, Amirmohammad and Lowd, Daniel},
+booktitle = {31st International Conference on Machine Learning, ICML 2014},
+pages = {I--710--I--718},
+publisher = {JMLR.org},
+title = {{Learning sum-product networks with direct and indirect variable interactions}},
+year = {2014}
+}
+@inproceedings{Peharz2014,
+abstract = {Sum-product networks (SPNs) are a recently proposed type of probabilistic graphical models allowing complex variable interactions while still granting efficient inference. In this paper we demonstrate the suitability of SPNs for modeling log-spectra of speech signals using the application of artificial bandwidth extension, i.e. artificially replacing the high-frequency content which is lost in telephone signals. We use SPNs as observation models in hidden Markov models (HMMs), which model the temporal evolution of log short-time spectra. Missing frequency bins are replaced by the SPNs using most-probable-explanation inference, where the state-dependent reconstructions are weighted with the HMM state posterior. According to subjective listening and objective evaluation, our system consistently and significantly improves the state of the art. {\textcopyright} 2014 IEEE.},
+author = {Peharz, Robert and Kapeller, Georg and Mowlaee, Pejman and Pernkopf, Franz},
+booktitle = {ICASSP, IEEE International Conference on Acoustics, Speech and Signal Processing - Proceedings},
+keywords = {HMM,SPN,graphical models,speech bandwidth extension},
+month = {may},
+pages = {3699--3703},
+publisher = {IEEE},
+title = {{Modeling speech with sum-product networks: Application to bandwidth extension}},
+year = {2014}
+}
+@article{Carreira-Perpinan2007,
+abstract = {The mean-shift algorithm, based on ideas proposed by Fukunaga and Hostetler [16], is a hill-climbing algorithm on the density defined by a finite mixture or a kernel density estimate. Mean-shift can be used as a nonparametric clustering method and has attracted recent attention in computer vision applications such as image segmentation or tracking. We show that, when the kernel is Gaussian, mean-shift is an expectation-maximization (EM) algorithm and, when the kernel is non-Gaussian, mean-shift is a generalized EM algorithm. This implies that mean-shift converges from almost any starting point and that, in general, its convergence is of linear order. For Gaussian mean-shift, we show: 1) the rate of linear convergence approaches 0 (superlinear convergence) for very narrow or very wide kernels, but is often close to 1 (thus, extremely slow) for intermediate widths and exactly 1 (sublinear convergence) for widths at which modes merge, 2) the iterates approach the mode along the local principal component of the data points from the inside of the convex hull of the data points, and 3) the convergence domains are nonconvex and can be disconnected and show fractal behavior. We suggest ways of accelerating mean-shift based on the EM interpretation. {\textcopyright} 2007 IEEE.},
+author = {Carreira-Perpi{\~{n}}{\'{a}}n, Miguel {\'{A}}},
+journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+keywords = {Clustering,EM algorithm,Gaussian mixtures,Kernel density estimators,Mean-shift algorithm},
+number = {5},
+pages = {767--776},
+title = {{Gaussian mean-shift is an EM algorithm}},
+volume = {29},
+year = {2007}
+}
+@inproceedings{Cheng2014,
+abstract = {Sum product networks (SPNs) are a new class of deep probabilistic models. They can contain multiple hidden layers while keeping their inference and training times tractable. An SPN consists of interleaving layers of sum nodes and product nodes. A sum node can be interpreted as a hidden variable, and a product node can be viewed as a feature capturing rich interactions among an SPN's inputs. We show that the ability of SPN to use hidden layers to model complex dependencies among words, and its tractable inference and learning times, make it a suitable framework for a language model. Even though SPNs have been applied to a variety of vision problems [1, 2], we are the first to use it for language modeling. Our empirical comparisons with six previous language models indicate that our SPN has superior performance.},
+author = {Cheng, Wei Chen and Kok, Stanley and Pham, Hoai Vu and Chieu, Hai Leong and Chai, Kian Ming A.},
+booktitle = {Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH},
+issn = {19909772},
+keywords = {Deep learning,Language models,Probabilistic graphical models,Sum-product networks},
+pages = {2098--2102},
+title = {{Language modeling with sum-product networks}},
+year = {2014}
+}
+@inproceedings{Gens2012,
+abstract = {Sum-product networks are a new deep architecture that can perform fast, exact inference on high-treewidth models. Only generative methods for training SPNs have been proposed to date. In this paper, we present the ﬁrst discriminative training algorithms for SPNs, combining the high accuracy of the former with the representational power and tractability of the latter. We show that the class of tractable discriminative SPNs is broader than the class of tractable generative ones, and propose an efﬁcient backpropagation-style algorithm for computing the gradient of the conditional log likelihood. Standard gradient descent suffers from the diffusion problem, but networks with many layers can be learned reliably using “hard” gradient descent, where marginal inference is replaced by MPE inference (i.e., inferring the most probable state of the non-evidence variables). The resulting updates have a simple and intuitive form. We test discriminative SPNs on standard image classiﬁcation tasks. We obtain the best results to date on the CIFAR-10 dataset, using fewer features than prior methods with an SPN architecture that learns local image structure discriminatively. We also report the highest published test accuracy on STL-10 even though we only use the labeled portion of the dataset.},
+address = {Lake Tahoe, NV, USA},
+author = {Gens, Robert and Domingos, Pedro},
+booktitle = {Proceedings of the 25th International Conference on Neural Information Processing Systems - Volume 2},
+pages = {3239--3247},
+publisher = {Curran Associates Inc.},
+title = {{Discriminative learning of sum-product networks}},
+year = {2012}
+}
+@incollection{Carreira-Perpinan2015,
+abstract = {A natural way to characterize the cluster structure of a dataset is by finding regions containing a high density of data. This can be done in a nonparametric way with a kernel density estimate, whose modes and hence clusters can be found using mean-shift algorithms. We describe the theory and practice behind clustering based on kernel density estimates and mean-shift algorithms. We discuss the blurring and nonblurring versions of mean-shift; theoretical results about mean-shift algorithms and Gaussian mixtures; relations with scale-space theory, spectral clustering and other algorithms; extensions to tracking, to manifold and graph data, and to manifold denoising; K-modes and Laplacian K-modes algorithms; acceleration strategies for large datasets; and applications to image segmentation, manifold denoising and multivalued regression.},
+author = {Carreira-Perpi{\~{n}}{\'{a}}n, Miguel {\'{A}}},
+booktitle = {Handbook of Cluster Analysis},
+chapter = {18},
+pages = {383--418},
+publisher = {CRC/Chapman and Hall},
+title = {{Clustering methods based on kernel density estimators: Mean-shift algorithms}},
+year = {2015}
+}
+@article{Little1963,
+author = {Little, John D. C. and Murty, Katta G. and Sweeney, Dura W. and Karel, Caroline},
+journal = {Operations Research},
+month = {dec},
+number = {6},
+pages = {972--989},
+title = {{An Algorithm for the Traveling Salesman Problem}},
+volume = {11},
+year = {1963}
+}
+@inproceedings{Dennis2015,
+abstract = {Sum-product networks (SPNs) are rooted, directed acyclic graphs (DAGs) of sum and product nodes with well-defined probabilistic semantics. Moreover, exact inference in the distribution represented by an SPN is guaranteed to take linear time in the size of the DAG. In this paper we introduce an algorithm that learns the structure of an SPN using a greedy search approach. It incorporates methods used in a previous SPN structure-learning algorithm, but, unlike the previous algorithm, is not limited to learning tree-structured SPNs. Several proven ideas from circuit complexity theory along with our experimental results provide evidence for the advantages of SPNs with less-restrictive, nontree structures.},
+address = {Buenos Aires, Argentina},
+author = {Dennis, Aaron and Ventura, Dan},
+booktitle = {IJCAI International Joint Conference on Artificial Intelligence},
+pages = {932--938},
+publisher = {AAAI Press},
+title = {{Greedy structure search for sum-product networks}},
+year = {2015}
+}
+@inproceedings{PTPD2015,
+abstract = {Sum-product networks (SPNs) are a promising avenue for probabilistic modeling and have been successfully applied to various tasks. However, some theoretic properties about SPNs are not yet well understood. In this paper we fill some gaps in the theoretic foundation of SPNs. First, we show that the weights of any complete and consistent SPN can be transformed into locally normalized weights without changing the SPN distribu-tion. Second, we show that consistent SPNs cannot model distributions significantly (ex-ponentially) more compactly than decompos-able SPNs. As a third contribution, we ex-tend the inference mechanisms known for SPNs with finite states to generalized SPNs with arbitrary input distributions.},
+address = {San Diego, CA, USA},
+author = {Peharz, Robert and Tschiatschek, Sebastian and Pernkopf, Franz and Domingos, Pedro},
+booktitle = {Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics},
+editor = {Lebanon, Guy and Vishwanathan, S. V. N.},
+pages = {744--752},
+publisher = {PMLR},
+title = {{On theoretical properties of sum-product networks}},
+year = {2015}
+}
+@book{Jaynes2003,
+author = {Jaynes, Edwin Thompson},
+publisher = {Cambridge University Press},
+title = {{Probability Theory: The logic of science}},
+year = {2003}
+}
+@incollection{Lee2013,
+abstract = {Sum–product networks (SPNs) are deep architectures that can learn and infer at low computational costs. The structure of SPNs is especially impor-tant for their performance; however, structure learning for SPNs has until now been introduced only for batch-type dataset. In this study, we propose a new on-line incremental structure learning method for SPNs. We note that SPNs can be represented by mixtures of basis distributions. Online learning of SPNs can be formulated as an online clustering problem, in which a local assigning instance corresponds to modifying the tree-structure of the SPN incrementally. In the method, the number of hidden units and even layers are evolved dynamically on incoming data. The experimental results show that the proposed method outper-forms the online version of the previous method. In addition, it achieves the performance of batch structure learning.},
+author = {Lee, Sang-Woo and Heo, Min-Oh and Zhang, Byoung-Tak},
+booktitle = {LNCS},
+pages = {220--227},
+title = {{Online Incremental Structure Learning of Sum–Product Networks}},
+volume = {8227},
+year = {2013}
+}
+@book{Murphy2012,
+author = {Murphy, Kevin Patrick},
+publisher = {The MIT Press},
+title = {{Machine Learning: A Probabilistic Perspective}},
+year = {2012}
+}
