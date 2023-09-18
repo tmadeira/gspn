@@ -1,0 +1,8 @@
+\input{common.tex}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[colormap name=whiteblack, domain=-5:18, domain y=-9:4, xlabel=$x_1$, ylabel=$x_2$, zlabel={$p_\mathcal{S}(x_1, x_2)$}]
+    \addplot3[surf] {multigauss(2, 18, 3, 10) * 4/20 + multigauss(2, 18, -4, 7) * 9/20 + multigauss(11, 8, -4, 7) * 7/20};
+  \end{axis}
+\end{tikzpicture}
+\end{document}

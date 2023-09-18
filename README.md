@@ -25,7 +25,7 @@ To cite my work, please use:
   city      = {Porto Alegre, RS, Brasil},
   doi       = {10.5753/eniac.2022.227582},
   issn      = {2763-9061},
-  journal   = {Anais do XIX Encontro Nacional de Inteligência Artificial e Computacional},
+  booktitle = {Anais do XIX Encontro Nacional de Inteligência Artificial e Computacional},
   pages     = {497-508},
   publisher = {SBC},
   year      = {2022},

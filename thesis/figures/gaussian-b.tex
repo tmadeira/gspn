@@ -1,0 +1,12 @@
+\input{common.tex}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[every axis plot post/.append style={
+    mark=none,domain=-3:8,samples=50,smooth,width=\textwidth},
+    axis x line*=bottom,
+    axis y line*=left,
+    enlargelimits=upper]
+    \addplot[thick, solid] {0.2 * gauss(2, 5) + 0.5 * gauss(0, 1) + 0.3 * gauss(5, 2)};
+  \end{axis}
+\end{tikzpicture}
+\end{document}

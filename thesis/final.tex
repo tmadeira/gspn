@@ -1,0 +1,40 @@
+\chapter{Final considerations}
+\label{cap:final}
+
+In this chapter, we will present the concluding remarks for this research. Section \ref{sec:final:summary} offers a concise summary of our work, emphasizing our contributions. Following that, Section \ref{sec:final:future} outlines potential avenues for future research in this domain.
+
+\section{Summary}
+\label{sec:final:summary}
+
+This work investigated the problem of finding maxima of Gaussian Sum-Product Networks.
+
+We reviewed literature about Gaussian Mixture Models, the number of local maxima in their probability density function, and techniques to find them. Additionally, we reviewed literature on Sum-Product Networks, their relationship with mixture models, and the challenges in finding optimal Maximum-A-Posteriori inference solutions in continuous SPNs.
+
+We adapted the Modal EM schema from GMMs to GSPNs, creating a tractable fixed-point iteration algorithm capable of finding a mode in a GSPN from any arbitrary initial point. To the extent of our knowledge, this algorithm represents the first method specifically designed for mode-finding in GSPNs, making this work a modest but pioneering contribution in the study of modes in SPNs.
+
+The correctness of the algorithm was proved, the time complexity was analyzed, and an implementation of it was released as open source in the RPCircuits.jl package.
+
+After presenting the algorithm, we discussed some practical applications in MAP inference and cluster analysis. For MAP inference, we argued that Modal EM can be used to improve the solution of any existing algorithm, leading to an approach which provably finds a local optimum, a property most current algorithms lack.
+
+For clustering, we performed illustrative examples on hierarchical clustering and image segmentation. For hierarchical clustering, we presented empirical results of iteratively learning smaller models starting from the training set of a digit from the MNIST dataset, and described how the approach can be used to categorize, explore or compress data. For image segmentation, we showed how the learning hyperparameters highly influence the number of clusters found by Modal EM in four different datasets, and visually compared its results with the segmentation obtained by the classical $k$-means algorithm.
+
+While image segmentation may not be the optimal application domain for SPNs, our experiments have demonstrated the applicability of clustering techniques for SPN model analysis. The number of modes in a density distribution serves as an indicator of the complexity of the underlying model, providing valuable insights into its representation capabilities.
+
+Modal EM for GSPNs, along with the experiment on hierarchical clustering, were published in the proceedings of a conference \citep{Madeira2022}. Additionally, a paper on modal clustering with GSPNs containing the image segmentation experiments has been published in a workshop \citep{Madeira2023}, further contributing to the dissemination of this research.
+
+\section{Future work}
+\label{sec:final:future}
+
+We acknowledge that this study represents only an initial exploration of mode finding in SPNs, and there is significant potential for future research to expand upon our work. The following list presents some promising avenues for future investigation, although it is by no means exhaustive.
+
+\begin{enumerate}
+  \item Although Chapter \ref{cap:gmm} cited the work by \citet{Pulkkinen2014} about finding global (or significant) maxima of GMMs, the problem of finding global maxima of GSPNs was not investigated and is left for future research.
+  \item MAP inference is likely hard in continuous SPNs, but there is no proof of that in the existing literature. We cited results on the complexity of MAP inference in discrete SPNs \citep{Peharz2015, Peharz2016, Conaty2017} that can possibly be adapted for continuous SPNs.
+  \item In Chapter \ref{cap:algorithm} we showed how the existing approximation algorithms for MAP inference in SPNs are unfit to guarantee local optimality in GSPNs and how Modal EM could improve the solutions they find, but did not run experiments to evaluate how it performs in practice.
+  \item As observed in Chapter \ref{cap:experiments}, our approach to hierarchical clustering tends to underrepresent high-density regions while overrepresenting low-density regions in the new dataset. Potential solutions to this limitation are to either optimize for weighted log-likelihood in the learning algorithms or to adjust the representation of models by over/undersampling them based on the density of their respective regions. This is left for future work.
+  \item The experimental results of the image segmentation task did not meet our expectations, and we attribute this outcome to a potential lack of model fit. We believe that exploring alternative methods for learning SPNs, such as the random structure learning approaches investigated by \citet{Peharz2020, Geh2021}, may yield improved results. Further investigation into applying Modal EM cluster analysis to SPNs learned using different methods remains an area for future research.
+  \item Image segmentation might not be the most suitable domain for applying clustering with SPNs, as SPNs typically excel in higher dimensions and scenarios involving missing values. Exploring modal clustering in alternative domains and conducting comprehensive empirical comparisons with state-of-the-art methods are important areas for future investigation, as outlined by \citet{Madeira2023}.
+  \item Although this work focused specifically on Gaussian SPNs, there is potential for the adaptation of Modal EM to other types of SPNs, including discrete ones, as observed by \citet{Madeira2022}.
+\end{enumerate}
+
+We hope this work can serve as a modest contribution to stimulate further research in the fascinating realm of tractable probabilistic models.

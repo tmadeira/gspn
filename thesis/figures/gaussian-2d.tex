@@ -1,0 +1,9 @@
+\input{common.tex}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[colormap name=whiteblack, domain=-8:12, domain y=-7:13, xlabel=$x_1$, ylabel=$x_2$, zlabel={$p(x_1, x_2)$}]
+    \addplot3[surf] {multigauss(2, 6, 3, 20)};
+  \end{axis}
+\end{tikzpicture}
+\end{document}
+

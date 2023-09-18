@@ -1,0 +1,76 @@
+\newcommand\listofthmlike[1][]{%
+  %% much hacking here to pick up the definition from the class
+  %% without oodles of conditionals.
+  \begingroup
+  \setlisttheoremstyle{#1}%
+  \def\contentsline##1{%
+    \csname thmt@contentsline@##1\endcsname{##1}%
+  }%
+  \@for\thmt@envname:=\thmt@allenvs\do{%
+    % CHECK: is \cs{l@\thmt@envname} repeatedly defined?
+    \thmtlo@newentry
+  }%
+  \let\thref@starttoc\@starttoc
+  \def\@starttoc##1{\thref@starttoc{loe}}%
+  % new hack: to allow multiple calls, we defer the opening of the
+  % loe file to AtEndDocument time. This is before the aux file is
+  % read back again, that is early enough.
+  % TODO: is it? crosscheck include/includeonly!
+  \@fileswfalse
+  \AtEndDocument{%
+    \if@filesw
+      \@ifundefined{tf@loe}{%
+        \expandafter\newwrite\csname tf@loe\endcsname
+        \immediate\openout \csname tf@loe\endcsname \jobname.loe\relax
+      }{}%
+    \fi
+  }%
+  %\expandafter
+  \makeatletter
+  \@starttoc{lof}
+  \makeatother
+  \endgroup
+}
+
+\chapter*{Lists}
+
+\section*{List of Abbreviations}
+
+\begin{tabular}{ll}
+  DAG  & Directed Acyclic Graph        \\
+  EM   & Expectation-Maximization      \\
+  GMM  & Gaussian Mixture Model        \\
+  GSPN & Gaussian Sum-Product Network  \\
+  KBT  & K-Best Tree                   \\
+  MAP  & Maximum-A-Posteriori          \\
+  MPE  & Most Probable Explanation     \\
+  PDF  & Probability Density Function  \\
+  PGM  & Probabilistic Graphical Model \\
+  %RAT-SPN & Random And Tensorized Sum-Product Network \\
+  RV   & Random Variable               \\
+  SPN  & Sum-Product Network           \\
+\end{tabular}
+
+\section*{List of Algorithms}
+\renewcommand{\listofalgorithms}{\begingroup
+  \tocfile{List of Algorithms}{loa}
+  \endgroup}
+\makeatletter
+\let\l@algorithm\l@figure
+\makeatother
+\makeatletter
+\@starttoc{loa}
+\makeatother
+
+\section*{List of Definitions}
+\listofthmlike[ignoreall,show={definition}]
+
+\section*{List of Figures}
+\makeatletter
+\@starttoc{lof}
+\makeatother
+
+\section*{List of Tables}
+\makeatletter
+\@starttoc{lot}
+\makeatother

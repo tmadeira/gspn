@@ -1,0 +1,30 @@
+\input{common.tex}
+\begin{document}
+\begin{tikzpicture}
+    [scale=.6,auto=left,every node/.style={draw, thick, circle, inner sep = 0pt, minimum width = 0.72cm}]
+  \node (n1) at (5,10) {$+$};
+  \node (n2) at (2,7) {$\times$};
+  \node (n3) at (5,7) {$\times$};
+  \node (n4) at (8,7) {$\times$};
+  \node (n5) at (2,4) {$X_1$};
+  \node (n6) at (4,4) {$X_1$};
+  \node (n7) at (6,4) {$X_2$};
+  \node (n8) at (8,4) {$X_2$};
+
+  \node[minimum width = 0.85cm] (n5) at (2,4) {};
+  \node[minimum width = 0.85cm] (n6) at (4,4) {};
+  \node[minimum width = 0.85cm] (n7) at (6,4) {};
+  \node[minimum width = 0.85cm] (n8) at (8,4) {};
+
+  \node[draw=none] (n9) at (2,3) {\tiny $(0.6, 0.4)$};
+  \node[draw=none] (n10) at (4,3) {\tiny $(0.9, 0.1)$};
+  \node[draw=none] (n11) at (6,3) {\tiny $(0.3, 0.7)$};
+  \node[draw=none] (n12) at (8,3) {\tiny $(0.2, 0.8)$};
+
+  \foreach \from/\to/\weight/\pos in {n1/n2/$\frac{20}{35}$/above left, n1/n3/$\frac{6}{35}$/above left, n1/n4/$\frac{9}{35}$/above right}
+    \draw (\from) edge[->, thick] node[\pos, draw=none, circle=none, minimum width=0.5cm, minimum height=0.2cm, inner sep=2pt]{\scriptsize \weight} (\to);
+
+  \foreach \from/\to in {n2/n5, n2/n7, n3/n5, n3/n8, n4/n6, n4/n8}
+    \draw (\from) edge[->, thick] (\to);
+\end{tikzpicture}
+\end{document}

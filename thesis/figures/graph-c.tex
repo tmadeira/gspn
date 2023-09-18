@@ -1,0 +1,13 @@
+\input{common.tex}
+\begin{document}
+\begin{tikzpicture}
+    [scale=.6,auto=left,every node/.style={draw, thick, circle, inner sep = 0pt, minimum width = 0.72cm}]
+  \node[fill=gray!30] (n1) at (2.5,4) {1};
+  \node (n2) at (1,2.5) {2};
+  \node (n3) at (2.5,1) {3};
+  \node (n4) at (4,1) {4};
+
+  \foreach \from/\to in {n1/n3, n1/n4, n2/n3}
+    \draw (\from) edge[-triangle 45, thick] (\to);
+\end{tikzpicture}
+\end{document}
